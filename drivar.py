@@ -1,6 +1,6 @@
 import json
 
-armas_tienda_input = input()
+armas_tienda_input = '{"t": 66, "u": 72, "d": 90, "r": 84, "j": 36, "g": 50, "s": 94, "q": 62, "f": 35}'
 items = input()
 
 armas_tienda = json.loads(armas_tienda_input)
