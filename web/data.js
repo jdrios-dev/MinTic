@@ -1,0 +1,4 @@
+const mock = {
+  user: "",
+  id: ""
+}
