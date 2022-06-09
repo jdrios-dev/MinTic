@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+  background-color: rgb(189, 189, 189);
+}
+
+.white {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid black;
+}
+
+.container {
+  padding: 0 70px;
+}
+
+.flex {
+  display: flex;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.header-box-item {
+  height: 70px;
+  width: 100px;
+}
+
+.hero-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.hero-item {
+  width: 50%;
+  max-width: 500px;
+  height: 350px;
+}
+
+.store-container {
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.store-item {
+  width: 33%;
+  height: 200px;
+  padding: 15px;
+}
+
+.first-child {
+  border-radius: 20px 0 0 20px;
+}
+
+.last-child {
+  border-radius: 0 20px 20px 0;
+}
+
+.item-store-header-container {
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.item-store-header-item {
+  width: 40px;
+  height: 20px;
+}
+
+.bottle-bottle-container {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  background-color: transparent;
+}
+
+.bottle-circle {
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
+  left: 40px;
+}
+
+.bottle {
+  background-color: rgba(150, 57, 57, 0.323);
+  width: 40px;
+  height: 80px;
+  position: absolute;
+  left: 60px;
+}
+
+.product-details-container {
+  height: 70px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.product-details-title {
+  height: 20px;
+  border-radius: 5px;
+}
+
+.product-details-actions-container {
+  padding: 5px;
+  justify-content: space-around;
+  background-color: transparent;
+
+}
+
+.product-details-actions-item {
+  width: 40%;
+  height: 20px;
+}
+
+.hero-item2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-item-column {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-item-column-item {
+  width: 50px;
+  height: 50px;
+  margin: 10px 5px;
+  border-radius: 10px;
+}
+
+.hero-item-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  align-self: center;
+  padding: 30px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://media-exp2.licdn.com/dms/image/C4E03AQEwIOTJH4-8yg/profile-displayphoto-shrink_800_800/0/1639588672127?e=1660176000&v=beta&t=12qPMGkz8m5tffgQRWuwKLlFArT627wO3XLisfqJfsM");
+  background-size: cover;
+  border-radius: 50%;
+  border: 2px solid yellow;
+}
