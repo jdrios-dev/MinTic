@@ -21,7 +21,8 @@ let varArrayDeObjetos = [
   {
     "edad": 25,
     "nombre": 'Daniel',
-    "estudia": true
+    "estudia": true,
+    "carro": 'Tesla'
   },
   {
     "edad": 28,
