@@ -1,6 +1,3 @@
-# CREATE SCHEMA reto4_04;
-# USE reto4_04;
-
 # Creacion de base de datos
 CREATE SCHEMA reto4_04;
 
@@ -133,16 +130,13 @@ INSERT INTO tbl_intencion_compra(cli_alias, int_consulta, int_fecha_consulta )
 INSERT INTO tbl_intencion_compra(cli_alias, int_consulta, int_fecha_consulta ) 
  VALUES ("ninja", "Mec de Colombia", "2020-03-27 18:30:20");
 INSERT INTO tbl_intencion_compra(cli_alias, int_consulta, int_fecha_consulta ) 
- VALUES ("rose", "Atom Electric", "2020-03-20 21:30:20");
- 
+ VALUES ("rose", "Atom Electric", "2020-03-20 21:30:20"); 
 INSERT INTO tbl_intencion_compra(cli_alias, int_consulta, int_fecha_consulta ) 
  VALUES ("green", "Yeti", "2020-01-10 17:30:20");
 INSERT INTO tbl_intencion_compra(cli_alias, int_consulta, int_fecha_consulta ) 
  VALUES ("green", "Trek", "2020-02-15 20:30:20");
 INSERT INTO tbl_intencion_compra(cli_alias, int_consulta, int_fecha_consulta ) 
  VALUES ("green", "Bmc", "2020-03-17 18:30:20");
-
-
 
 UPDATE tbl_bicicleta
   SET bic_anio=2017
@@ -152,3 +146,46 @@ UPDATE tbl_cliente
   SET cli_celular="3115678432"
   WHERE cli_alias="ninja";
 
+DELETE FROM tbl_intencion_compra
+	WHERE (cli_alias ="green" AND int_consulta="Trek");
+    
+SELECT "Consulta 1";
+SELECT fab_nombre
+	FROM tbl_fabricante
+    ORDER BY fab_nombre ASC;
+    
+SELECT "Consulta 2";
+SELECT fab_nombre, bic_precio, bic_anio
+FROM tbl_bicicleta bic
+INNER JOIN tbl_fabricante fab 
+ON fab.fab_codigo = bic.fab_codigo
+WHERE bic_anio >= 2019 
+ORDER BY fab_nombre;
+ 	
+SELECT "Consulta 3";
+SELECT tbl_fabricante.fab_nombre
+FROM tbl_motocicleta
+INNER JOIN tbl_fabricante
+ON tbl_motocicleta.fab_codigo = tbl_fabricante.fab_codigo
+INNER JOIN tbl_proveedor 
+ON tbl_motocicleta.pro_codigo = tbl_proveedor.pro_codigo
+WHERE tbl_proveedor.pro_nombre = "Auteco";
+    
+SELECT "Consulta 4";
+SELECT int_consulta
+FROM tbl_intencion_compra
+WHERE cli_alias = "lucky"
+ORDER BY int_consulta ASC;
+
+SELECT "Consulta 5";
+SELECT tbl_cliente.cli_alias, tbl_cliente.cli_nombre, tbl_cliente.cli_apellido
+FROM tbl_intencion_compra
+INNER JOIN tbl_cliente
+ON tbl_intencion_compra.cli_alias = tbl_cliente.cli_alias
+WHERE tbl_intencion_compra.int_consulta = "Yeti"
+ORDER BY tbl_cliente.cli_alias;
+
+SELECT "Consulta 6";
+SELECT COUNT(*)
+FROM tbl_bicicleta
+WHERE bic_anio >= 2019;
